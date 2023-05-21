@@ -17,10 +17,10 @@ namespace HelloWorld.Controllers
         }
 
         /// <summary> 
-        /// Méthode Hello User 
+        /// Méthode salutation d'un utilisateur 
         /// </summary> 
         /// <param name="firstname">Instance <see cref="string"/> avec le nom de l'utilisateur</param> 
-        /// <returns>Instance <see cref="string"/> "Hello <paramref name="firstname"/>!"; sinon, <c>null</c></returns> 
+        /// <returns>Instance <see cref="Object"/> "Hello <paramref name="firstname"/>!"; sinon, message d'erreur</returns> 
         /// <exception cref="System.ArgumentException">
         /// <paramref name="firstname"/> est <c>null</c> ou vide.
         /// </exception>
@@ -30,11 +30,13 @@ namespace HelloWorld.Controllers
             if (string.IsNullOrWhiteSpace(firstname))
             {
                 string error = "Aucun nom n'a été renseigné";
+                //le message retour est converti en Object JSON
                 return BadRequest(new { error });
                 //throw new ArgumentException(message: "Aucun nom n'a été renseigné");
             }
 
             string message = $"Hello {firstname}!";
+            //le message retour est converti en Object JSON
             return Ok(new { message });
         }
     }
