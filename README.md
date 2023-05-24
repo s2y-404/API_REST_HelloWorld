@@ -30,16 +30,20 @@ cd API_REST_HelloWorld
 2. Exécutez la commande suivante pour lancer le projet :
 
 ```
+dotnet run
+```
+ou
+```
 dotnet run --project "API_REST_HelloWorld"
 ```
 
-3. L'API sera accessible à l'adresse apparue dans votre terminal, généralement : [https://localhost:5001](https://localhost:5001)
+3. L'API sera accessible à l'adresse apparue dans votre terminal : [https://localhost:55029](https://localhost:55029)
 
 ## Utilisation de l'API
 
 Une fois le projet lancé, vous pouvez utiliser votre navigateur ou un outil tel que Postman pour effectuer des requêtes à l'API.
 
-- Pour saluer un utilisateur, envoyez une requête GET à l'URL suivante : [https://localhost:5001/HelloWorld?firstname=Stanley](https://localhost:5001/HelloWorld?firstname=Stanley)
+- Pour saluer un utilisateur, envoyez une requête GET à l'URL suivante : [https://localhost:55029/HelloWorld?firstname=Stanley](https://localhost:55029/HelloWorld?firstname=Stanley)
    Remplacez `Stanley` par le prénom de votre choix.
 
    Vous devriez recevoir une réponse avec le message "Hello {firstname}!", où {firstname} est le prénom que vous avez spécifié.
