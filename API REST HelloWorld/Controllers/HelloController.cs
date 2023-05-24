@@ -13,8 +13,8 @@ namespace HelloWorld.Controllers
         /// </summary> 
         /// <param name="firstname">Instance <see cref="string"/> avec le nom de l'utilisateur</param> 
         /// <returns>Instance <see cref="Object"/> "Hello <paramref name="firstname"/>!"; sinon, message d'erreur</returns> 
-        /// <response code="200">Ok<response>
-        /// <response code="400">Bad Request<response>
+        /// <response code="200">Ok</response>
+        /// <response code="400">Bad Request</response>
         [HttpGet("HelloWorld")]
         public IActionResult HelloWorld(string ?firstname)
         {
